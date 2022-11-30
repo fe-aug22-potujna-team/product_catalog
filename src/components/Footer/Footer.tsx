@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss';
-import back from './backtop.svg';
-import logo from '../../logo.svg'
+import back from '../../images/icons/backtop.svg';
+import logo from '../../images/icons/logo.svg'
 
 export const Footer: React.FC = () => {
   return (
