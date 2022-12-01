@@ -1,0 +1,122 @@
+html {
+    font-family: "Roboto", sans-serif;
+    color: var(--color-main);
+  }
+  
+  body,
+  h2,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 272px;
+    height: 100%;
+    max-width: 198px;
+    border: 1px solid #f3f3f3;
+    border-radius: 8px;
+    padding: 32px;
+
+    &__image {
+        align-self: center;
+        width: 208px;
+        height: 100%;
+        margin-bottom: 24px;
+      
+    }
+
+    &__title {
+        font-family: 'Mont-Regular';
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 8px;
+        color: #0F0F11;
+    }
+
+    &__price {
+        color: #0F0F11;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 31px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #E2E6E9;
+        margin-bottom: 16px;
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-family: 'Mont-SemiBold';
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__info-param {
+        font-size: 12px;
+        font-weight: bold;
+        color: #89939A;
+    }
+
+    &__info-value {
+        font-size: 12px;
+        font-family: 'Mont-SemiBold';
+        color: #0F0F11;
+    }
+
+    &__add {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &__addTo {
+        font-family: 'Mont-SemiBold';
+        display: flex;
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        font-weight: bold;
+        border: none;
+        background-color: #F86800;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__addTo-isActive {
+        background-color: white;
+        border: 1px solid #89939A;
+        color: #F86800;
+    }
+
+    &__liked {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #89939A;
+        border-radius: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__likedH {
+        fill: blue;
+    }
+  }
