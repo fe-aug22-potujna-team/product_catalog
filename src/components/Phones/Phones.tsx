@@ -10,27 +10,17 @@ export const Phones: React.FC = () => {
 
   const lastCardIndex = currentPage * cardPerPage;
   const firstCardIndex = lastCardIndex - cardPerPage;
-  const currentCard = phonesAmount.slice(firstCardIndex, lastCardIndex);
-
-  const paginate = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const prevPage = () => {
-    setCurrentPage(prev => prev - 1);
-  }
-
-  const nextPage = () => {
-    setCurrentPage(prev => prev + 1);
-  }
+  const currentCards = phonesAmount.slice(firstCardIndex, lastCardIndex);
 
   return (
     <div>
-      <PhoneCardList phonesAmount={currentCard}/>
-      <Pagination cardPerPage={cardPerPage} totalCards={phonesAmount.length} paginate={paginate}/>
-    
-      <button onClick={prevPage}>prevPage</button>
-      <button onClick={nextPage}>nextPage</button>
+      <PhoneCardList phonesAmount={currentCards}/>
+      <Pagination 
+        cardPerPage={cardPerPage} 
+        totalCards={phonesAmount.length} 
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
