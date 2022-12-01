@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+main,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+section,
+article {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 152px 1fr 64px 64px;
+  align-items: center;
+  margin: auto;
+  height: 64px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px #E2E6E9;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: 152px 1fr 48px 48px;
+    height: 48px;
+  }
+
+  @media (max-width: 639px) {
+    grid-template-columns: 1fr 48px;
+    height: 48px;
+  }
+
+  &__logo {
+    margin-left: 24px;
+
+    @media (max-width: 1199px) {
+      margin-left: 16px;
+    }
+  }
+}
+
+.nav {
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.image {
+  display: grid;
+
+  &__heartAndCart {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    border-left: 1px solid #E2E6E9;
+  
+    @media (max-width: 1199px) {
+      height: 48px;
+    }
+  
+    @media (max-width: 639px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    border-left: 1px solid #E2E6E9;
+  
+    @media (min-width: 640px) {
+      display: none;
+    }
+  
+    @media (max-width: 1199px) {
+      height: 48px;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+}
+
+.nav__item {
+  display: grid;
+  grid-auto-flow: row;
+  padding-right: 64px;
+
+  @media (max-width: 1199px) {
+    padding-right: 32px;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.nav__link {
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 11px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #89939A;
+
+  transition: color 0.3s;
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: #0F0F11;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  top: 34.5px;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background-color: #0F0F11;
+
+  @media (max-width: 1199px) {
+    top: 26.5px;
+  }
+}
+
+
