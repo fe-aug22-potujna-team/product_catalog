@@ -7,6 +7,9 @@ import burger from '../../images/icons/burger.png'
 import { BurgerMenu } from './BurgerMenu';
 
 export const Header: React.FC = () => {
+  const cartCounts = 5;
+  const likedCount = 12;
+
   return (
     <>
       <header className="header">
@@ -51,6 +54,11 @@ export const Header: React.FC = () => {
           />
           </a>
         </div>
+        {likedCount > 0 && (
+          <div className="img-count img-count__heart">
+            {likedCount}
+          </div>
+        )}
         
         <div className='image__heartAndCart'>
           <a href="#home">
@@ -61,6 +69,12 @@ export const Header: React.FC = () => {
           />
           </a>
         </div>
+
+        {cartCounts > 0 && (
+          <div className="img-count img-count__cart">
+            {cartCounts}
+          </div>
+        )}
 
         <div className='image__burger'>
           <a href="#menu">

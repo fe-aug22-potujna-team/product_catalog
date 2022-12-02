@@ -149,4 +149,41 @@ button {
   }
 }
 
+.img-count {
+  width: 14px;
+  border-radius: 50%;
+  background-color: #476DF4;
+  font-family: 'Mont-SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 12px;
+  text-align: center;
+  color: #FFFFFF;
+  
+  @media (max-width: 639px) {
+    display: none;
+  }
+  
+  &__heart {
+    position: absolute;
+    right: 82px;
+    top: 18px;
 
+    @media (max-width: 1199px) {
+      right:58px;
+      top: 10px;
+    }
+  }
+
+  &__cart {
+    position: absolute;
+      right: 18px;
+      top: 18px;
+
+    @media (max-width: 1199px) {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
