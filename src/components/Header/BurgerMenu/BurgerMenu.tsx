@@ -10,12 +10,12 @@ export const BurgerMenu: React.FC = () => {
     <div className='menu menu__with-hidden' id="menu">
       <div className='menu__header'>
         <a href="#home" className="header__logo">
-        <img src={logo} alt="logo"
-        />
+          <img src={logo} alt="logo"
+          />
         </a>
         <div className='close'>
           <a href="#home">
-          <img src={close} alt="logo"/>
+            <img src={close} alt="logo" />
           </a>
         </div>
       </div>
@@ -46,13 +46,13 @@ export const BurgerMenu: React.FC = () => {
       <div className='menu__footer'>
         <div className='menu__footer__cart menu__footer__cart__heart'>
           <a href="#home" >
-          <img src={heart} alt="logo"/>
+            <img src={heart} alt="logo" />
           </a>
         </div>
     
         <div className='menu__footer__cart'>
           <a href="#home" >
-          <img src={cart} alt="logo"/>
+            <img src={cart} alt="logo" />
           </a>
         </div>
       </div>

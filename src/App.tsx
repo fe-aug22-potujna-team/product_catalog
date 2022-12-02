@@ -15,16 +15,16 @@ const BASE_URL = '/product_catalog';
 
 export const App: React.FC = () => (
   <>
-  <Header />
+    <Header />
     <Routes>
-    <Route path={`${BASE_URL}/`} element={<MainPage />}></Route>
-        <Route path={`${BASE_URL}/phones`} element={<PhonePage />}></Route>
-        <Route path={`${BASE_URL}/tablets`} element={<TabletPage />}></Route>
+      <Route path={`${BASE_URL}/`} element={<MainPage />}></Route>
+      <Route path={`${BASE_URL}/phones`} element={<PhonePage />}></Route>
+      <Route path={`${BASE_URL}/tablets`} element={<TabletPage />}></Route>
       <Route path={`${BASE_URL}/accessories`} element={<AccessoriesPage />}></Route>
-      <Route path={`${BASE_URL}/selected`} element={<SelectedPhonePage/>}></Route>
+      <Route path={`${BASE_URL}/selected`} element={<SelectedPhonePage />}></Route>
       <Route path={`${BASE_URL}/favorites`} element={<FavoritesPage />}></Route>
-      <Route path={`${BASE_URL}/checkout`} element={ <CartPage />}></Route>
-      </Routes>
+      <Route path={`${BASE_URL}/checkout`} element={<CartPage />}></Route>
+    </Routes>
     <Footer />
-    </>
+  </>
 );

@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to={`${BASE_URL}/tablets`} 
+              <NavLink to={`${BASE_URL}/tablets`}
                 className={({ isActive }) =>
                   isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
                 }
@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to={`${BASE_URL}/accessories`} 
+                to={`${BASE_URL}/accessories`}
                 className={({ isActive }) =>
                   isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
                 }
@@ -66,38 +66,38 @@ export const Header: React.FC = () => {
         <div className='image__heartAndCart'>
           <NavLink to={`${BASE_URL}/favorites`}
             className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+              isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
+            }
           >
-          <img
-            src={heart}
-            alt="logo"
-            className="image"
-          />
+            <img
+              src={heart}
+              alt="logo"
+              className="image"
+            />
           </NavLink>
         </div>
         
         <div className='image__heartAndCart'>
           <NavLink to={`${BASE_URL}/checkout`}
-          className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+            className={({ isActive }) =>
+              isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
+            }
           >
-          <img
-            src={cart}
-            alt="logo"
-            className="image"
-          />
+            <img
+              src={cart}
+              alt="logo"
+              className="image"
+            />
           </NavLink>
         </div>
 
         <div className='image__burger'>
           <a href="#menu">
-          <img
-            src={burger}
-            alt="logo"
-            className="image"
-          />
+            <img
+              src={burger}
+              alt="logo"
+              className="image"
+            />
           </a>
         </div>
       </header>
