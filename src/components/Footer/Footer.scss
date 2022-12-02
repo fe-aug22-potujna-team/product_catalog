@@ -1,4 +1,9 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px -1px 0px #E2E6E9;
 
   @media (min-width: 640px) {
     display: flex;
@@ -8,6 +13,11 @@
   @media (min-width: 1400px) {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  &__container {
+    box-shadow: 0px -1px 0px #E2E6E9;
+    width: 100%;
   }
 
   &__logo {
