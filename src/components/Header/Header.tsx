@@ -10,6 +10,8 @@ import { NavLink } from "react-router-dom";
 export const Header: React.FC = () => {
   const BASE_URL = '/product_catalog';
   
+  const cartCounts = 5;
+  const likedCount = 12;
 
   return (
     <>
@@ -76,6 +78,11 @@ export const Header: React.FC = () => {
             />
           </NavLink>
         </div>
+        {likedCount > 0 && (
+          <div className="img-count img-count__heart">
+            {likedCount}
+          </div>
+        )}
         
         <div className='image__heartAndCart'>
           <NavLink to={`${BASE_URL}/checkout`}
@@ -90,6 +97,12 @@ export const Header: React.FC = () => {
             />
           </NavLink>
         </div>
+
+        {cartCounts > 0 && (
+          <div className="img-count img-count__cart">
+            {cartCounts}
+          </div>
+        )}
 
         <div className='image__burger'>
           <a href="#menu">

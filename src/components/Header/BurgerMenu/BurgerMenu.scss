@@ -20,15 +20,12 @@ button {
 }
 
 .menu {
+  background-color: #FFFFFF;
 
-  &__with-hidden {
-    overflow: hidden;
-  }
-  
+  overflow: hidden;
   height: 100vh;
 
   // overflow-y: auto;
-    // z-index: 3;
 
   position: fixed;
   top: 0;
@@ -110,8 +107,10 @@ button {
 .menu__footer {
   display: grid;
   grid-auto-flow: column;
-
-  margin-top: 284px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   border-top: 1px solid #E2E6E9;
   height: 64px;
@@ -149,4 +148,8 @@ button {
   @media (max-width: 1199px) {
     height: 48px;
   }
+}
+
+.header__logo {
+  width: 80px;
 }

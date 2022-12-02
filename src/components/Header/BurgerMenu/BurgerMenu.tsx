@@ -7,7 +7,7 @@ import close from '../../../images/icons/close.png'
 
 export const BurgerMenu: React.FC = () => {
   return (
-    <div className='menu menu__with-hidden' id="menu">
+    <div className='menu' id="menu">
       <div className='menu__header'>
         <a href="#home" className="header__logo">
           <img src={logo} alt="logo"
