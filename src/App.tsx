@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
 import { Header } from './components/Header'
-import { PhoneCard } from './components/PhoneCard';
 import { Footer } from './components/Footer'
+import { MainPage } from './components/MainPage';
 
 export const App: React.FC = () => (
   <div>
     <Header />
-    <PhoneCard />
+    <MainPage/>
     <Footer />
   </div>
 );
