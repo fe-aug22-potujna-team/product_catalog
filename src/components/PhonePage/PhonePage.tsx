@@ -40,9 +40,10 @@ export const PhonePage: React.FC = () => {
           <div>
             <p className='Setting__title'>Items on page</p>
             <select className='Setting__select' onChange={(e) => setCardPerPage(+e.target.value)}>
-              <option value="4">4</option>
               <option value="8">8</option>
               <option value="16">16</option>
+              <option value="16">24</option>
+              <option value="all">all</option>
             </select>
           </div>
       </div>
