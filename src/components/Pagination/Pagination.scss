@@ -1,0 +1,45 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 140px;
+    margin-top: 40px;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        list-style: none;
+        border: 1px solid gray;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &-active {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &__button {
+        height: 32px;
+        width: 32px;
+        border: 1px solid grey;
+        border-radius: 50px;
+        background-color: white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
