@@ -1,7 +1,8 @@
-export enum SortPhones {
-    Newest = 'age',
-    Alphabetically = 'name',
-    Cheapest = 'price',
+export enum SortType {
+    Newest = 'newest',
+    Alphabetically = 'alphabetically',
+    Cheapest = 'cheapest',
+    Expensive = 'expensive',
 }
 
 export enum ProductsPerPage {

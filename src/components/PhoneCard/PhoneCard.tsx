@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import './PhoneCard.scss';
 import phoneImg from '../../images/phones/ph.png'
 import cn from 'classnames'
+import { Product } from '../../Product'
 
-export const PhoneCard: React.FC = () => {
+type Props = {
+    phone: Product;
+} 
+
+export const PhoneCard: React.FC<Props> = ( { phone } ) => {
     const [selected, setSelected] = useState(false);
 
   return (
@@ -15,27 +20,27 @@ export const PhoneCard: React.FC = () => {
         />
         
         <p className='card__title'>
-            Apple iPhone Xs 64GB Silver (iMT9G2FS/A)
+            {phone.name}
         </p>
 
         <p className='card__price'>
-            $799
+            {phone.price}
         </p>
 
         <section className='card__info'>
             <div className='card__info-item'>
                 <p className='card__info-param'>Screen</p>
-                <p className='card__info-value'>5.8" OLED</p>
+                <p className='card__info-value'>{phone.screen}</p>
             </div>
 
             <div className='card__info-item'>
                 <p className='card__info-param'>Capacity</p>
-                <p className='card__info-value'>64 GB</p>
+                <p className='card__info-value'>{phone.capacity}</p>
             </div>
 
             <div className='card__info-item'>
                 <p className='card__info-param'>RAM</p>
-                <p className='card__info-value'>4 GB</p>
+                <p className='card__info-value'>{phone.ram}</p>
             </div>
         </section>
 
