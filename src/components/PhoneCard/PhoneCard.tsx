@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PhoneCard.scss';
-import phoneImg from '../../images/phones/ph.png'
 import cn from 'classnames'
 import { Product } from '../../Product'
 
@@ -11,11 +10,13 @@ type Props = {
 export const PhoneCard: React.FC<Props> = ( { phone } ) => {
     const [selected, setSelected] = useState(false);
 
+    let phoneImage = `https://luminous-cucurucho-0255ea.netlify.app/${phone.image}`;
+
   return (
     <article className='card'>
         <img 
             className='card__image'
-            src={phoneImg} 
+            src={phoneImage} 
             alt="img" 
         />
         
