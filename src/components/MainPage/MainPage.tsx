@@ -1,12 +1,18 @@
 import React from 'react';
-import { PhoneCard } from '../PhoneCard';
+import { HotPrices } from './HotPrices';
+import { ShopByCategory } from './ShopByCategory';
+import { BrandNewModels } from './BrandNewModels';
+import { WelcomeTitle } from './WelcomeTitle';
+
 import './MainPage.scss';
 
 export const MainPage: React.FC = () => {
   return (
     <>
-      <div>Main</div>
-      <PhoneCard />
+      <WelcomeTitle />
+      <BrandNewModels />
+      <ShopByCategory />
+      <HotPrices />
     </>
   );
 };
