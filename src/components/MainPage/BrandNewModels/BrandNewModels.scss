@@ -26,17 +26,17 @@ button {
   width: 1136px;
   margin: auto;
 
-  margin-top: 80px;
+  margin-top: 90px;
   margin-bottom: 24px;
 
   @media (max-width: 1199px) {
     width: 593px;
-    margin-top: 64px;
+    margin-top: 74px;
   }
 
   @media (max-width: 639px) {
     width: 288px;
-    margin-top: 57px;
+    margin-top: 66px;
   }
 
   &__title__M {
@@ -66,24 +66,57 @@ button {
     }
   }
 
-  &__phones {
-    display: grid;
-    align-items: center;
+  &__slider {
+    display: block;
     width: 1136px;
-    margin: auto;
+    height: 536px;
   
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 80px;
   
     @media (max-width: 1199px) {
-      width: 593px;
+      width: 592px;
+      height: 536px;
       margin-bottom: 64px;
     }
   
     @media (max-width: 639px) {
       width: 288px;
+      height: 536px;
       margin-bottom: 57px;
     }
   }
+
+  &__arrowRight {
+    position: absolute;
+    top: -64px;
+    right: 0;
+    
+    @media (max-width: 1199px) {
+      top: -64px;
+      right: -1px;
+    }
+    
+    @media (max-width: 639px) {
+      top: -70px;
+      right: 0;
+    }
+  }
+
+  &__arrowLeft {
+    position: absolute;
+    top: -64px;
+    right: 48px;
+
+    @media (max-width: 1199px) {
+      top: -64px;
+      right: 46px;
+    }
+
+    @media (max-width: 639px) {
+      top: -70px;
+      right: 47px;
+    }
+  }
 }
-
-

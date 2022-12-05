@@ -86,22 +86,130 @@ button {
   }
 
   &__Slider {
-    display: grid;
-    grid-auto-flow: column;
+    display: block;
+    width: 1040px;
     height: 400px;
-    width: 1136px;
-    background-color: #89939A;
+    // background-color: #89939A;
   
     margin-top: 56px;
-  
+    margin-left: auto;
+    margin-right: auto;
+    
     @media (max-width: 1199px) {
-      width: 593px;
-      margin-top: 32px;
+      width: 490px;
+      height: 189px;
     }
   
     @media (max-width: 639px) {
-      width: 288px;
-      margin-top: 24px;
+      width: 320px;
+      height: 320px;
+    }
+
+    // @media (max-width: 1199px) {
+    //   width: 593px;
+    //   margin-top: 32px;
+    // }
+  
+    // @media (max-width: 639px) {
+    //   width: 288px;
+    //   margin-top: 24px;
+    // }
+  }
+}
+
+.welcomeTitle__arrowRight {
+  border: 1px solid #B4BDC3;
+  border-radius: 48px;
+  height: 400px;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  right: -50px;
+
+  @media (max-width: 1199px) {
+    height: 189px;
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 200px;
+    left: 8px;
+  
+    @media (max-width: 1199px) {
+      bottom: 94.5px;
+      left: 6px;
+    }
+  
+    @media (max-width: 639px) {
+      display: none;
     }
   }
+}
+
+.welcomeTitle__arrowLeft {
+  border: 1px solid #B4BDC3;
+  border-radius: 48px;
+  height: 400px;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  left: -50px;
+
+  @media (max-width: 1199px) {
+    height: 189px;
+  }
+  @media (max-width: 639px) {
+    display: none;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 200px;
+    left: 8px;
+
+    @media (max-width: 1199px) {
+      bottom: 94.5px;
+      left: 6px;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
+  }
+}
+
+.banner189 {
+  @media (min-width: 1199px) {
+    display: none;
+  }
+  
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.banner320 {
+  @media (min-width: 639px) {
+    display: none;
+  }
+}
+
+.banner400 {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.slick-dots li button:before {
+  display: block;
+  color: #E2E6E9;
+  background-color: black;
+  width: 14px;
+  height: 4px;
+  top: 10px;
+  content: url('https: //img.icons8.com/material/512/sort-down--v1.png');
 }
