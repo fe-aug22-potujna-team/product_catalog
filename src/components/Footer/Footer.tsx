@@ -5,7 +5,7 @@ import logo from '../../images/icons/logo.svg'
 
 export const Footer: React.FC = () => {
   return (
-    <div className='container'>
+    <div className='footer__container'>
       <section className='footer'>
         <img src={logo} className='footer__logo' alt='logo'>
         </img>
