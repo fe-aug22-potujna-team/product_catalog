@@ -7,6 +7,7 @@ import house from '../../images/icons/house.svg'
 import arrow from '../../images/icons/arrow.svg'
 import { SortType, ProductsPerPage } from '../../Enums/Enums'
 import { Product } from '../../Product'
+import { Loader } from '../Loader'
 
 export const PhonePage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -208,16 +209,22 @@ useEffect(() => {
           </div>
       </div>
 
-      {phonesFromServer.length > 0
-        ? <PhoneCardList phonesAmount={phonesFromServer}/>
-        : 'nothing'
-      }
-      <Pagination 
-        cardPerPage={cardPerPage} 
-        totalCards={phonesCount} 
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
+        {
+           (phonesFromServer.length > 0
+            ? (
+                <>
+                  <PhoneCardList phonesAmount={phonesFromServer}/>
+                  <Pagination 
+                    cardPerPage={cardPerPage} 
+                    totalCards={phonesCount} 
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                  />
+                </>
+              )
+            : <Loader />
+          )
+        }
     </div>
   );
 };
