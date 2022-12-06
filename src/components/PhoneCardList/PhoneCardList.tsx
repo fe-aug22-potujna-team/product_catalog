@@ -9,10 +9,10 @@ type Props = {
 
 export const PhoneCardList: React.FC<Props> = ({ phonesAmount }) => {
   return (
-    <ul className='test'>
+    <ul className='cardList'>
         {
           phonesAmount.map((phone: Product) => (
-            <li key={phone.id}>
+            <li key={phone.id} className='cardList__item'>
               <PhoneCard phone={phone}/>
             </li>
           ))
