@@ -12,12 +12,9 @@ export const FavoritesPage: React.FC = () => {
           <a className='favorites__home' href='/product_catalog/'>
             <img className='favorites__home-icon' src={home} alt='home'></img>
           </a>
-
           <img className='favorites__arrow-icon' src={right} alt='ridht arrow'></img>
-
           <p className='favorites__page'>Favourites</p>
         </div>
-
         <h2 className='favorites__heading'>Favourites</h2>
         <p className='favorites__description'>5 items</p>
         <div className='favorites__phones-container'>
@@ -39,7 +36,6 @@ export const FavoritesPage: React.FC = () => {
             </div>
           </div>
         </div>
-       
       </section>
     </div>
   );
