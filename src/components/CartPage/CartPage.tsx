@@ -36,11 +36,11 @@ export const CartPage: React.FC = () => {
     <div className='cart__container'>
       <section className='cart'>
         <div className='cart__back'>
-        <img className='cart__backIcon' src={arrow} alt='back'></img>
-        <a className='cart__backBtn' href='/'>
-          Back
+          <img className='cart__backIcon' src={arrow} alt='back'></img>
+          <a className='cart__backBtn' href='/'>
+            Back
           </a>
-          </div>
+        </div>
         <h2 className='cart__heading'>Cart</h2>
 
         <div className='cart__checkout'>
@@ -58,11 +58,11 @@ export const CartPage: React.FC = () => {
                   <button className='cart__quantityBtn cart__quantityBtn-delete'>
                     <img src={minus} alt='delete'></img>
                   </button>
-                    <span className='cart__quantity'>{` ${phone.quantity} `}</span>
+                  <span className='cart__quantity'>{` ${phone.quantity} `}</span>
                   <button className='cart__quantityBtn cart__quantityBtn-add'>
                     <img src={plus} alt='add'></img>
-                    </button>
-                    <p className='cart__price'>{`$${phone.price}`}</p>
+                  </button>
+                  <p className='cart__price'>{`$${phone.price}`}</p>
                 </div>
               </div>
             ))}
