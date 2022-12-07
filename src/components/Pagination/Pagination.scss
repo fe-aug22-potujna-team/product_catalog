@@ -20,9 +20,12 @@
         list-style: none;
         border: 1px solid gray;
         border-radius: 50%;
+        transition: 0.3s;
 
         &:hover {
             cursor: pointer;
+            border-color: #F86800;
+            background-color: #F86800;
         }
 
         &-active {
@@ -37,9 +40,12 @@
         border: 1px solid grey;
         border-radius: 50px;
         background-color: white;
+        transition: 0.3s;
 
         &:hover {
             cursor: pointer;
+            border-color: black;
+            background-color: black;
         }
     }
 }

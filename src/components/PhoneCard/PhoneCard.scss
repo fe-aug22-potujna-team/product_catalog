@@ -117,5 +117,9 @@ html {
 
     &__likedH {
         fill: blue;
+
+        &-isActive {
+            background-color: blue;
+        }
     }
   }

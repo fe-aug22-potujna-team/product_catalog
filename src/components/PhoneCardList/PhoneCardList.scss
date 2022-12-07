@@ -1,9 +1,9 @@
 .cardList {
-    width: 1400px;
+    max-width: 1400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 80px;
+    gap: 16px;
     margin: 0 auto;
 
     &__item {

@@ -8,6 +8,7 @@ import arrow from '../../images/icons/arrow.svg'
 import { SortType, ProductsPerPage } from '../../Enums/Enums'
 import { Product } from '../../Product'
 import { Loader } from '../Loader'
+import { getPhonesFromServer } from '../../api/api';
 import '../../utils__styles/grid.scss'
 
 export const PhonePage: React.FC = () => {
@@ -17,12 +18,9 @@ export const PhonePage: React.FC = () => {
   const [sort, setSort] = useState('newest');
   const [phonesCount, setPhonesCount] = useState(0);
 
-  const PHONES_PATH = 'https://main--luminous-cucurucho-0255ea.netlify.app/.netlify/functions/server/products'
-
-const getPhones = useCallback(async () => {
+const getPhones = useCallback(() => {
   const query = `?sortType=${sort}&page=${currentPage}&perPage=${cardPerPage}`
-  const response = await fetch(`${PHONES_PATH}${query}`);
-  return response.json()
+  return getPhonesFromServer(query);
 }, [cardPerPage, currentPage, sort]);
 
 const loadData = useCallback(async () => {
@@ -39,22 +37,25 @@ useEffect(() => {
 
 
   return (
-    <div className='PhonePage'>
-      <div className='PhonePage__rout Rout'>
+    <div className='PhonePage grid grid--block'>
+      <div className='PhonePage__rout Rout grid__item grid__item--tablet-2-12 grid__item--desctop-4-24'>
         <img  className='PhonePage__margin Rout__img' src={house} alt="img" />
         <img  className='Rout__img' src={arrow} alt="img" />
         <p className='Rout__text'>Phones</p>
       </div>
 
-      <h1 className='PhonePage__title'>Mobile phones</h1>
+      <h1 className='PhonePage__title grid__item grid__item--tablet-2-12 grid__item--desctop-4-24'>Mobile phones</h1>
 
-      <h1 className='PhonePage__models'>5 models</h1>
+      <h1 className='PhonePage__models grid__item grid__item--tablet-2-12 grid__item--desctop-4-24'>{phonesCount} models</h1>
       
-      <div className='PhonePage__setting Setting'>
+      <div className='PhonePage__setting Setting grid__item--tablet-2-12 grid__item grid__item--desctop-4-24'>
           <div className='PhonePage__margin'>
             <p className='Setting__title'>Sort by</p>
             <select className='Setting__select Setting__select-sort'
-               onChange={(e) => setSort(e.target.value)}
+               onChange={(e) => {
+                setSort(e.target.value)
+                setCurrentPage(1);
+              }}
             >
               <option value={'newest'}>Newest</option>
               <option value={SortType.Alphabetically}>Alphabetically</option>
@@ -68,7 +69,8 @@ useEffect(() => {
             <select className='Setting__select' onChange={(e) => {
               setCardPerPage(+e.target.value);
               setCurrentPage(1);
-            }}>
+            }}
+            >
               <option value={ProductsPerPage.Eight}>8</option>
               <option value={ProductsPerPage.Sixteen}>16</option>
               <option value={ProductsPerPage.TwentyFour}>24</option>
@@ -81,19 +83,24 @@ useEffect(() => {
            (phonesFromServer.length > 0
             ? (
                 <>
-                  {/* <div className='grid grid--block grid__item--desctop-4-10'> */}
-                  <PhoneCardList phonesAmount={phonesFromServer}/>
-                {/* </div> */}
-
-                <Pagination 
-                  cardPerPage={cardPerPage} 
-                  totalCards={phonesCount} 
-                  setCurrentPage={setCurrentPage}
-                  currentPage={currentPage}
-                />
+                  <div className='grid__item grid__item--tablet-2-12 grid__item--desctop-1-24'>
+                    <PhoneCardList phonesAmount={phonesFromServer}/>
+                  </div>
+                
+                  <div className='grid__item grid__item--tablet-2-12 grid__item--desctop-1-24'>
+                    <Pagination 
+                      cardPerPage={cardPerPage} 
+                      totalCards={phonesCount} 
+                      setCurrentPage={setCurrentPage}
+                      currentPage={currentPage}
+                    />
+                  </div>
                 </>
               )
-            : <Loader />
+            : (
+              <div className='grid__item grid__item--tablet-2-12 grid__item--desctop-1-24'>
+                <Loader />
+              </div>)
           )
         }
     </div>
