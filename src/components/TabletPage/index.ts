@@ -1,1 +1,1 @@
-export * from './TabletPage';
+export * from './TabletPage'

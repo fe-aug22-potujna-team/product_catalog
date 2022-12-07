@@ -1,1 +1,1 @@
-export * from './BrandNewModels';
+export * from './BrandNewModels'
