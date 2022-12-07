@@ -115,11 +115,11 @@ html {
         justify-content: center;
     }
 
-    &__likedH {
-        fill: blue;
+    &__favorites {
+        fill: black;
 
         &-isActive {
-            background-color: blue;
+            fill: blue;
         }
     }
   }

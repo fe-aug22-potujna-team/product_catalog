@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './PhonePage.scss';
-// import { useSearchParams } from "react-router-dom";
 import { PhoneCardList } from '../PhoneCardList/PhoneCardList';
 import { Pagination } from '../Pagination/Pagination';
 import house from '../../images/icons/house.svg'
