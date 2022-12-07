@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
         </ul>
         <div className='footer__backtop'>
           <p className='footer__backtop-text'>Back to top</p>
-          <a href='/'>
+          <a href='/product_catalog/'>
             <img src={back} alt='back top' className='footer__backtop-icon'></img>
           </a>
           
