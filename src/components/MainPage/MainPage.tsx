@@ -8,11 +8,11 @@ import './MainPage.scss';
 
 export const MainPage: React.FC = () => {
   return (
-    <>
+    <div className='main'>
       <WelcomeTitle />
       <BrandNewModels />
       <ShopByCategory />
       <HotPrices />
-    </>
+    </div>
   );
 };
