@@ -1,23 +1,25 @@
-import React from 'react';
-import './Header.scss';
+import React from 'react'
+import './Header.scss'
+import { NavLink } from 'react-router-dom'
 import logo from '../../images/icons/main_logo.png'
 import cart from '../../images/icons/cart.png'
 import heart from '../../images/icons/heart.png'
 import burger from '../../images/icons/burger.png'
-import { BurgerMenu } from './BurgerMenu';
-import { NavLink } from "react-router-dom";
+import { BurgerMenu } from './BurgerMenu'
 
 export const Header: React.FC = () => {
-  const BASE_URL = '/product_catalog';
-  
-  const cartCounts = 5;
-  const likedCount = 12;
+  const BASE_URL = '/product_catalog'
+
+  const cartCounts = 5
+  const likedCount = 12
 
   return (
     <>
       <header className="header">
         <NavLink to={`${BASE_URL}/`} className="header__logo">
-          <img src={logo} alt="logo"
+          <img
+            src={logo}
+            alt="logo"
           />
         </NavLink>
 
@@ -27,27 +29,23 @@ export const Header: React.FC = () => {
               <NavLink
                 to={`${BASE_URL}/`}
                 end
-                className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+                className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
               >
                 HOME
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to={`${BASE_URL}/phones`}
-                className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+              <NavLink
+                to={`${BASE_URL}/phones`}
+                className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
               >
                 PHONES
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to={`${BASE_URL}/tablets`}
-                className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+              <NavLink
+                to={`${BASE_URL}/tablets`}
+                className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
               >
                 TABLETS
               </NavLink>
@@ -55,9 +53,7 @@ export const Header: React.FC = () => {
             <li className="nav__item">
               <NavLink
                 to={`${BASE_URL}/accessories`}
-                className={({ isActive }) =>
-                  isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-                }
+                className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
               >
                 ACCESSORIES
               </NavLink>
@@ -65,11 +61,10 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
 
-        <div className='image__heartAndCart'>
-          <NavLink to={`${BASE_URL}/favorites`}
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-            }
+        <div className="image__heartAndCart">
+          <NavLink
+            to={`${BASE_URL}/favorites`}
+            className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
           >
             <img
               src={heart}
@@ -83,12 +78,11 @@ export const Header: React.FC = () => {
             {likedCount}
           </div>
         )}
-        
-        <div className='image__heartAndCart'>
-          <NavLink to={`${BASE_URL}/checkout`}
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--is--active is-active" : "nav__link"
-            }
+
+        <div className="image__heartAndCart">
+          <NavLink
+            to={`${BASE_URL}/checkout`}
+            className={({ isActive }) => (isActive ? 'nav__link nav__link--is--active is-active' : 'nav__link')}
           >
             <img
               src={cart}
@@ -104,7 +98,7 @@ export const Header: React.FC = () => {
           </div>
         )}
 
-        <div className='image__burger'>
+        <div className="image__burger">
           <a href="#menu">
             <img
               src={burger}
@@ -117,5 +111,5 @@ export const Header: React.FC = () => {
 
       <BurgerMenu />
     </>
-  );
-};
+  )
+}
