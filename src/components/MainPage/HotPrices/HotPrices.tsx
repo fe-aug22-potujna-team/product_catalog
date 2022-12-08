@@ -82,6 +82,7 @@ export const HotPrices: React.FC = () => {
       }
     ]
   };
+  
   return (
     <>
       <div className='hotPrices'>

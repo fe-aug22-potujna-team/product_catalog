@@ -11,7 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
 function SampleNextArrow(props: any) {
-  const { className, style, onClick } = props;
+  // const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     // <div
     //   className={className}
@@ -27,7 +28,8 @@ function SampleNextArrow(props: any) {
 }
 
 function SamplePrevArrow(props: any) {
-  const { className, style, onClick } = props;
+  // const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     // <div
     //   className={className}
