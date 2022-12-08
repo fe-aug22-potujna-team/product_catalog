@@ -93,7 +93,7 @@ export const HotPrices: React.FC = () => {
       <div className="hotPrices__slider">
         <Slider {...settings}>
           <div>
-            <PhoneCard />
+            {/* <PhoneCard />
           </div>
           <div>
             <PhoneCard />
@@ -114,7 +114,7 @@ export const HotPrices: React.FC = () => {
             <PhoneCard />
           </div>
           <div>
-            <PhoneCard />
+            <PhoneCard /> */}
           </div>
         </Slider>
       </div>
