@@ -47,7 +47,7 @@ export const CartPage: React.FC = () => {
         <div className="cart__checkout">
           <div className="cart__selectedItems">
             {selectedPhones.map(phone => (
-              <div className="cart__phonecard">
+              <div className="cart__phonecard" key="phone.id">
                 <div className="cart__phonecard-about">
                   <button className="cart__deleteBtn">
                     <img src={close} alt="phone" className="cart__delete" />

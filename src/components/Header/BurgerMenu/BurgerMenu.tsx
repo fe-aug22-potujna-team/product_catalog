@@ -5,7 +5,12 @@ import cart from '../../../images/icons/cart.png'
 import heart from '../../../images/icons/heart.png'
 import close from '../../../images/icons/close.png'
 
+import { NavLink } from "react-router-dom";
+
 export const BurgerMenu: React.FC = () => {
+  const BASE_URL = '/product_catalog';
+  const click = document.getElementById("close-button") as HTMLInputElement;
+  
   return (
     <div className="menu" id="menu">
       <div className="menu__header">
@@ -24,24 +29,32 @@ export const BurgerMenu: React.FC = () => {
 
       <div className="menu__items">
         <div className="menu__title">
-          <a href="#home" className="menu__link nav__link--is--active is-active">
-            HOME
-          </a>
+          <NavLink to={`${BASE_URL}`} onClick={() => {click.click()}}>
+            <div className="menu__link nav__link--is--active">
+              HOME
+            </div>
+          </NavLink>
         </div>
         <div className="menu__title">
-          <a href="#phones" className="menu__link">
-            PHONES
-          </a>
+          <NavLink to={`${BASE_URL}/phones`} onClick={() => {click.click()}}>
+            <div className="menu__link nav__link--is--active">
+              PHONES
+            </div>
+          </NavLink>
         </div>
         <div className="menu__title">
-          <a href="#tablets" className="menu__link">
-            TABLETS
-          </a>
+          <NavLink to={`${BASE_URL}/tablets`} onClick={() => {click.click()}}>
+            <div className="menu__link nav__link--is--active">
+              TABLETS
+            </div>
+          </NavLink>
         </div>
         <div className="menu__title">
-          <a href="#accessories" className="menu__link">
-            ACCESSORIES
-          </a>
+          <NavLink to={`${BASE_URL}/accessories`} onClick={() => {click.click()}}>
+            <div className="menu__link nav__link--is--active">
+              ACCESSORIES
+            </div>
+          </NavLink>
         </div>
       </div>
 
