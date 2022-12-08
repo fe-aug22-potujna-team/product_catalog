@@ -42,7 +42,7 @@ function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div>
-      <a href="#home" className='hotPrices__arrowRight' onClick={onClick}>
+      <a href="#home" className='itemCard__slider__arrowRight' onClick={onClick}>
         <img src={arrowRightDefault} alt="arrow"/>
       </a>
     </div>
@@ -53,7 +53,7 @@ function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div>
-      <a href="#home" className='hotPrices__arrowLeft' onClick={onClick}>
+      <a href="#home" className='itemCard__slider__arrowLeft' onClick={onClick}>
         <img src={arrowLeftDefault} alt="arrow"/>
       </a>
     </div>
@@ -65,7 +65,7 @@ export const ItemCard: React.FC = () => {
   const [like, setLike] = useState(false);
   const BASE_URL = '/product_catalog';
   
-  let settings = {
+  const settings = {
     dots: false,
     infinite: false,
     speed: 500,
@@ -406,11 +406,11 @@ export const ItemCard: React.FC = () => {
         </div>
       </div>
 
-      <div className='hotPrices'>
-        <h2 className='hotPrices__title'>You may also like</h2>
+      <div className='itemCard__slider'>
+        <h2 className='itemCard__slider__title'>You may also like</h2>
       </div>
 
-      <div className='hotPrices__slider'>
+      <div className='itemCard__slider__slider'>
         <Slider {...settings}>
           <div>
             <PhoneCard />
