@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/product_catalog/static/css/main.6af97432.css",
-    "main.js": "/product_catalog/static/js/main.a62547d5.js",
+    "main.css": "/product_catalog/static/css/main.b64bac5f.css",
+    "main.js": "/product_catalog/static/js/main.61bd96de.js",
     "static/media/logo.svg": "/product_catalog/static/media/logo.ccaf7a234c9d096c90d06573cdbddc94.svg",
+    "static/media/itemCard.png": "/product_catalog/static/media/itemCard.7414487278033104cf13.png",
     "static/media/Mont-Regular.ttf": "/product_catalog/static/media/Mont-Regular.e797167c18f9897bb607.ttf",
     "static/media/Mont-SemiBold.ttf": "/product_catalog/static/media/Mont-SemiBold.0b5e68ebb36ca4006e21.ttf",
     "static/media/Mont-Bold.ttf": "/product_catalog/static/media/Mont-Bold.3675b597d3ffb2b75168.ttf",
     "static/media/Banner.png": "/product_catalog/static/media/Banner.71e7e0917555f044d60b.png",
     "static/media/shopByCategory3desktop.png": "/product_catalog/static/media/shopByCategory3desktop.ca41c40df628caa719e1.png",
     "static/media/shopByCategory2desktop.png": "/product_catalog/static/media/shopByCategory2desktop.ab269482f54393432fe6.png",
+    "static/media/itemCardTablet.png": "/product_catalog/static/media/itemCardTablet.c9e17753acd8d46d9158.png",
     "static/media/shopByCategory1desktop.png": "/product_catalog/static/media/shopByCategory1desktop.86adecc8baf6f6ff4adb.png",
     "static/media/shopByCategory3mobile.png": "/product_catalog/static/media/shopByCategory3mobile.5bdf60e60421be41ea83.png",
     "static/media/shopByCategory2mobile.png": "/product_catalog/static/media/shopByCategory2mobile.d5181b07ee9217e72e65.png",
@@ -23,16 +25,18 @@
     "static/media/slick.eot": "/product_catalog/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/product_catalog/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/product_catalog/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/home.svg": "/product_catalog/static/media/home.9a24a70540404ccecd05fd9f900ddeeb.svg",
     "index.html": "/product_catalog/index.html",
     "static/media/close.svg": "/product_catalog/static/media/close.adff151dead090d2bb35af0399d6582c.svg",
     "static/media/plus.svg": "/product_catalog/static/media/plus.c87eb500f799b3ac0a092cf06a699e88.svg",
     "static/media/backtop.svg": "/product_catalog/static/media/backtop.411b5a1b4b9eda1837e852a741117fc2.svg",
+    "static/media/rightArrow.svg": "/product_catalog/static/media/rightArrow.2a072ff1bf1fd396b30e9dec3a108dcb.svg",
     "static/media/minus.svg": "/product_catalog/static/media/minus.a1d3940e4bb0b95e44c0b5e3620f262a.svg",
-    "main.6af97432.css.map": "/product_catalog/static/css/main.6af97432.css.map",
-    "main.a62547d5.js.map": "/product_catalog/static/js/main.a62547d5.js.map"
+    "main.b64bac5f.css.map": "/product_catalog/static/css/main.b64bac5f.css.map",
+    "main.61bd96de.js.map": "/product_catalog/static/js/main.61bd96de.js.map"
   },
   "entrypoints": [
-    "static/css/main.6af97432.css",
-    "static/js/main.a62547d5.js"
+    "static/css/main.b64bac5f.css",
+    "static/js/main.61bd96de.js"
   ]
 }
