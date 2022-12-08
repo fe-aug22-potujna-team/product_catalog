@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4757943e-8325-4cd9-b4b7-d69b45d3e841" name="Changes" comment="some changes">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccessoriesPage/AccessoriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccessoriesPage/AccessoriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccessoriesPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccessoriesPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartPage/CartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartPage/CartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FavoritesPage/FavoritesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FavoritesPage/FavoritesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FavoritesPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FavoritesPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/BurgerMenu/BurgerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/BurgerMenu/BurgerMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/BurgerMenu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/BurgerMenu/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/BrandNewModels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/BrandNewModels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/HotPrices/HotPrices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/HotPrices/HotPrices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/HotPrices/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/HotPrices/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/ShopByCategory/ShopByCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/ShopByCategory/ShopByCategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/ShopByCategory/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/ShopByCategory/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/WelcomeTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/WelcomeTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhoneCard/PhoneCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhoneCard/PhoneCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhoneCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhoneCard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePage/PhonePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePage/PhonePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SelectedPhonePage/SelectedPhonePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectedPhonePage/SelectedPhonePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SelectedPhonePage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectedPhonePage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TabletPage/TabletPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabletPage/TabletPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TabletPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabletPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IGtLOcWsv5PZENfLCUFmgwEOfe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Projects/team_project/product_catalog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Projects\\team_project\\product_catalog\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4757943e-8325-4cd9-b4b7-d69b45d3e841" name="Changes" comment="" />
+      <created>1669819690962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669819690962</updated>
+      <workItem from="1669819692692" duration="7286000" />
+      <workItem from="1670158152106" duration="7388000" />
+      <workItem from="1670409543527" duration="551000" />
+      <workItem from="1670410117124" duration="1405000" />
+      <workItem from="1670411553235" duration="1480000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added utils styles grid layout, mixins, variables">
+      <created>1669938282327</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669938282327</updated>
+    </task>
+    <task id="LOCAL-00002" summary="some changes">
+      <created>1670409934258</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409934258</updated>
+    </task>
+    <task id="LOCAL-00003" summary="some changes">
+      <created>1670409952575</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409952575</updated>
+    </task>
+    <task id="LOCAL-00004" summary="some changes">
+      <created>1670410229245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670410229245</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added utils styles grid layout, mixins, variables" />
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+  </component>
+</project>

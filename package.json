@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mate-academy/eslint-config-react-typescript": "^1.0.11",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,7 +21,6 @@
     "react-slick": "^0.29.0",
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",
-    "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .tsx,.ts --fix ./src -c .eslintrc.json"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +52,14 @@
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.10",
-    "sass": "^1.56.1"
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "eslint": "^8.29.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.11",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3"
   }
 }
