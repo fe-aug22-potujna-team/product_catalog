@@ -38,8 +38,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SampleNextArrow(props: any) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <div>
       <a href="#home" className='itemCard__slider__arrowRight' onClick={onClick}>
@@ -49,8 +50,9 @@ function SampleNextArrow(props: any) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SamplePrevArrow(props: any) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <div>
       <a href="#home" className='itemCard__slider__arrowLeft' onClick={onClick}>
@@ -208,7 +210,6 @@ export const ItemCard: React.FC = () => {
           </div>
 
           <div className='itemCard__phone__phone__info'>
-
             <div className='itemCard__phone__phone__colors__title'>
               Available colors
               <div className='itemCard__phone__phone__colors__id'>
@@ -216,70 +217,76 @@ export const ItemCard: React.FC = () => {
               </div>
             </div>
 
-              <div className='itemCard__phone__phone__colors__container'>
-                <div className='itemCard__phone__phone__colors__container__item is-active'>
-                  <div className='inn inn__1'></div>
-                </div>
-                <div className='itemCard__phone__phone__colors__container__item'>
-                  <div className='inn inn__2'></div>
-                </div>
-                <div className='itemCard__phone__phone__colors__container__item'>
-                  <div className='inn inn__3'></div>
-                </div>
-                <div className='itemCard__phone__phone__colors__container__item'>
-                  <div className='inn inn__4'>
-                </div>
+            <div className='itemCard__phone__phone__colors__container'>
+              <div className='itemCard__phone__phone__colors__container__item is-active'>
+                <div className='inn inn__1'></div>
+              </div>
+              <div className='itemCard__phone__phone__colors__container__item'>
+                <div className='inn inn__2'></div>
+              </div>
+              <div className='itemCard__phone__phone__colors__container__item'>
+                <div className='inn inn__3'></div>
+              </div>
+              <div className='itemCard__phone__phone__colors__container__item'>
+                <div className='inn inn__4'>
               </div>
             </div>
+          </div>
 
-            <div></div>
+          <div></div>
 
-            <div className='itemCard__phone__phone__space__title'>Select capacity</div>
-
-              <div className='itemCard__phone__phone__space__container'>
-                <div className='itemCard__phone__phone__space__container__item is-active'>
-                  64 GB
-                </div>
-                <div className='itemCard__phone__phone__space__container__item'>
-                  256 GB
-                </div>
-                <div className='itemCard__phone__phone__space__container__item'>
-                  512 GB
-                </div>
-            </div>
-            
-            <div></div>
-
-
-            <div className='itemCard__phone__phone__price__container'>
-              <div className='price'>$799</div>
-              <div></div>
-              <div className='noPrice'>$1199</div>
-            </div>
-
-            <div></div>
-            
-            <div className='itemCard__phone__phone__addAndLike'>
-              <button 
-                onClick={() => {setSelected(!selected)}}
-                className={cn('itemCard__phone__phone__addAndLike__add', { 
-                    'itemCard__phone__phone__addAndLike__added': selected,
-                })}
-              >
-                {selected ? 'Added' : 'Add to cart'}
-              </button>
-
-              <div></div>
-              
-              <div
-                className='itemCard__phone__phone__addAndLike__like'
-                onClick={() => setLike(true)}
-              >
-                {/* <a href="#home"> */}
-                  <img src={like ? heartLikeFull : heartLike} alt="home" className='likeImg'/>
-                {/* </a> */}
+          <div className='itemCard__phone__phone__space__title'>Select capacity</div>
+          <div className='itemCard__phone__phone__space__container'>
+            <a href="#home">
+              <div className='itemCard__phone__phone__space__container__item is-active'>
+                64 GB
               </div>
+            </a>
+            
+            <a href="#home">
+              <div className='itemCard__phone__phone__space__container__item'>
+                256 GB
+              </div>
+            </a>
+            
+            <a href="#home">
+              <div className='itemCard__phone__phone__space__container__item'>
+                512 GB
+              </div>
+            </a>
+          </div>
+            
+          <div></div>
+
+          <div className='itemCard__phone__phone__price__container'>
+            <div className='price'>$799</div>
+            <div></div>
+            <div className='noPrice'>$1199</div>
+          </div>
+
+          <div></div>
+            
+          <div className='itemCard__phone__phone__addAndLike'>
+            <button 
+              onClick={() => {setSelected(!selected)}}
+              className={cn('itemCard__phone__phone__addAndLike__add', { 
+                  'itemCard__phone__phone__addAndLike__added': selected,
+              })}
+            >
+              {selected ? 'Added' : 'Add to cart'}
+            </button>
+
+            <div></div>
+            
+            <div
+              className='itemCard__phone__phone__addAndLike__like'
+              onClick={() => setLike(true)}
+            >
+              {/* <a href="#home"> */}
+                <img src={like ? heartLikeFull : heartLike} alt="like" className='likeImg'/>
+              {/* </a> */}
             </div>
+          </div>
             
             <div className='itemCard__phone__phone__techSpecs'>
               <div className='itemCard__phone__phone__techSpecs__name'>
