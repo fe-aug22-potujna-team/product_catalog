@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import './CartPage.scss'
-import cart1 from './phones-hardcoded/cart1.png'
-import cart2 from './phones-hardcoded/cart2.png'
-import cart3 from './phones-hardcoded/cart3.png'
-import arrow from '../../images/icons/slider_arrow_left.png'
+import './CartPage.scss';
+import cart1 from './phones-hardcoded/cart1.png';
+import cart2 from './phones-hardcoded/cart2.png';
+import cart3 from './phones-hardcoded/cart3.png';
+import arrow from '../../images/icons/slider_arrow_left.png';
 import CartItem from './CartItem';
 
 const phonesFromStorage = [
@@ -42,7 +42,7 @@ export const CartPage: React.FC = () => {
       <section className="cart">
         <div className="cart__back">
           <img className="cart__backIcon" src={arrow} alt="back" />
-          <a className="cart__backBtn" href="/">
+          <a className="cart__backBtn" href="/product_catalog/">
             Back
           </a>
         </div>
@@ -53,6 +53,7 @@ export const CartPage: React.FC = () => {
 
             {phones.map(phone => (
               <CartItem
+                key={phone.id}
                 phone={phone}
                 setPhones={setPhones}
                 phones={phones}

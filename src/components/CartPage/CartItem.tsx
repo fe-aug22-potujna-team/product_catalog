@@ -1,6 +1,7 @@
-import close from '../../images/icons/close.svg'
-import plus from '../../images/icons/plus.svg'
-import minus from '../../images/icons/minus.svg'
+import React from 'react';
+import close from '../../images/icons/close.svg';
+import plus from '../../images/icons/plus.svg';
+import minus from '../../images/icons/minus.svg';
 import { useState } from 'react';
 
 //add types after getting phones from locale storage
