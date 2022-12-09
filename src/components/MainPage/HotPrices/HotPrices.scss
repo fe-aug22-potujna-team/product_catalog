@@ -21,7 +21,7 @@ button {
 
 .hotPrices {
   display: grid;
-  grid-template-columns: 1fr 48px 32px;
+  grid-template-columns: 1fr 32px 16px 32px;
   align-items: center;
   width: 1136px;
   margin: auto;
@@ -47,8 +47,6 @@ button {
     line-height: 41px;
     letter-spacing: -0.01em;
     color: #0F0F11;
-
-    padding-bottom: 24px;
 
     @media (max-width: 639px) {
       font-size: 22px;
@@ -79,34 +77,79 @@ button {
   }
 
   &__arrowRight {
-    position: absolute;
-    top: -91px;
-    right: 0;
+    height: 32px;
+    width: 32px;
+    border: 1px solid #B4BDC3;
+    border-radius: 50px;
 
-    @media (max-width: 1199px) {
-      top: -91px;
-      right: -1px;
-    }
+    position: absolute;
+    top: -60px;
+    right: 0px;
 
     @media (max-width: 639px) {
-      top: -78px;
+      top: -55px;
       right: 0;
+    }
+
+    transition: border 0.5s;
+    
+      &:hover {
+        border: 1px solid #0F0F11;
+      }
+
+    
+      &__img {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        
+        @media (max-width: 1199px) {
+          top: 7px;
+          right: 7px;
+        }
+        
+        @media (max-width: 639px) {
+          top: 7px;
+          right: 7px;
+      }
     }
   }
 
   &__arrowLeft {
-    position: absolute;
-    top: -91px;
-    right: 48px;
-
-    @media (max-width: 1199px) {
-      top: -91px;
-      right: 46px;
+    height: 32px;
+      width: 32px;
+      border: 1px solid #B4BDC3;
+      border-radius: 50px;
+    
+      position: absolute;
+      top: -60px;
+      right: 48px;
+    
+      @media (max-width: 639px) {
+        top: -55px;
+        right: 47px;
+      }
+    
+      transition: border 0.5s;
+    
+      &:hover {
+        border: 1px solid #0F0F11;
+      }
+    
+      &__img {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    
+        @media (max-width: 1199px) {
+          top: 7px;
+          right: 7px;
+        }
+    
+        @media (max-width: 639px) {
+          top: 7px;
+          right: 7px;
+        }
+      }
     }
-
-    @media (max-width: 639px) {
-      top: -78px;
-      right: 47px;
-    }
-  }
 }

@@ -207,8 +207,7 @@ a {
       &__techSpecs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        align-items: center;
-        align-self: start;
+        align-items: flex-end;
 
         &__name {
           font-family: 'Mont-Regular';
@@ -644,8 +643,7 @@ a {
 .itemCard__phone__phone__techSpecs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  align-self: start;
+  align-items: flex-end;
   width: 320px;
 
   @media (max-width: 1199px) {

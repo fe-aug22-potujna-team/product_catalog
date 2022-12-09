@@ -28,34 +28,44 @@ export const BurgerMenu: React.FC = () => {
       </div>
 
       <div className="menu__items">
-        <div className="menu__title">
-          <NavLink to={`${BASE_URL}`} onClick={() => {click.click()}}>
-            <div className="menu__link nav__link--is--active">
-              HOME
-            </div>
-          </NavLink>
-        </div>
-        <div className="menu__title">
-          <NavLink to={`${BASE_URL}/phones`} onClick={() => {click.click()}}>
-            <div className="menu__link nav__link--is--active">
-              PHONES
-            </div>
-          </NavLink>
-        </div>
-        <div className="menu__title">
-          <NavLink to={`${BASE_URL}/tablets`} onClick={() => {click.click()}}>
-            <div className="menu__link nav__link--is--active">
-              TABLETS
-            </div>
-          </NavLink>
-        </div>
-        <div className="menu__title">
-          <NavLink to={`${BASE_URL}/accessories`} onClick={() => {click.click()}}>
-            <div className="menu__link nav__link--is--active">
-              ACCESSORIES
-            </div>
-          </NavLink>
-        </div>
+        <NavLink
+          to={`${BASE_URL}`}
+          onClick={() => { click.click() }}
+          className="menu__title"
+        >
+          <div className="menu__link nav__link--is--active">
+            HOME
+          </div>
+        </NavLink>
+        <NavLink
+          to={`${BASE_URL}/phones`}
+          onClick={() => { click.click() }}
+          className="menu__title"
+        >
+          <div className="menu__link nav__link--is--active">
+            PHONES
+          </div>
+        </NavLink>
+
+        <NavLink
+          to={`${BASE_URL}/tablets`}
+          onClick={() => { click.click() }}
+          className="menu__title"
+        >
+          <div className="menu__link nav__link--is--active">
+            TABLETS
+          </div>
+        </NavLink>
+
+        <NavLink
+          to={`${BASE_URL}/accessories`}
+          onClick={() => { click.click() }}
+          className="menu__title"
+        >
+          <div className="menu__link nav__link--is--active">
+            ACCESSORIES
+          </div>
+        </NavLink>
       </div>
 
       <div className="menu__footer">
