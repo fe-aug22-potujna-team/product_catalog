@@ -1,37 +1,41 @@
 import React from 'react'
+import { useState } from 'react';
 import './CartPage.scss'
 import cart1 from './phones-hardcoded/cart1.png'
 import cart2 from './phones-hardcoded/cart2.png'
 import cart3 from './phones-hardcoded/cart3.png'
 import arrow from '../../images/icons/slider_arrow_left.png'
-import close from '../../images/icons/close.svg'
-import plus from '../../images/icons/plus.svg'
-import minus from '../../images/icons/minus.svg'
+import CartItem from './CartItem';
 
-const selectedPhones = [
+const phonesFromStorage = [
   {
+    id: 1,
     name: 'Apple iPhone 14 Pro 128GB Silver (MQ023)',
     imgSrc: cart1,
     price: 999,
-    quantity: 1
   },
   {
+    id: 2,
     name: 'Apple iPhone 14 Plus 128GB PRODUCT Red (MQ513)',
     imgSrc: cart2,
     price: 859,
-    quantity: 1
   },
   {
+    id: 3,
     name: 'Apple iPhone 11 Pro Max 64GB Gold (iMT9G2FS/ A)',
     imgSrc: cart3,
     price: 799,
-    quantity: 1
   }
 ]
 
 export const CartPage: React.FC = () => {
-  const sum = selectedPhones.reduce((sum, n) => sum + n.price, 0)
-  const quantity = selectedPhones.reduce((sum, n) => sum + n.quantity, 0)
+  const selectedPhones = [...phonesFromStorage];
+
+  const [phones, setPhones] = useState(selectedPhones);
+  const sum = phones.reduce((sum, n) => sum + n.price, 0);
+
+  const [quantityTotal, setQuantityTotal] = useState(phones.length);
+  const [amountTotal, setAmountTotal] = useState(sum);
 
   return (
     <div className="cart__container">
@@ -46,31 +50,20 @@ export const CartPage: React.FC = () => {
 
         <div className="cart__checkout">
           <div className="cart__selectedItems">
-            {selectedPhones.map(phone => (
-              <div className="cart__phonecard" key="phone.id">
-                <div className="cart__phonecard-about">
-                  <button className="cart__deleteBtn">
-                    <img src={close} alt="phone" className="cart__delete" />
-                  </button>
-                  <img src={phone.imgSrc} alt="phone" className="cart__phonecard-photo" />
-                  <p className="cart__phonecard-name">{phone.name}</p>
-                </div>
-                <div className="cart__phonecard-about cart__phonecard-quantity">
-                  <button className="cart__quantityBtn cart__quantityBtn-delete">
-                    <img src={minus} alt="delete" />
-                  </button>
-                  <span className="cart__quantity">{` ${phone.quantity} `}</span>
-                  <button className="cart__quantityBtn cart__quantityBtn-add">
-                    <img src={plus} alt="add" />
-                  </button>
-                  <p className="cart__price">{`$${phone.price}`}</p>
-                </div>
-              </div>
+
+            {phones.map(phone => (
+              <CartItem
+                phone={phone}
+                setPhones={setPhones}
+                phones={phones}
+                setQuantityTotal={setQuantityTotal}
+                setAmountTotal={setAmountTotal}
+              />
             ))}
           </div>
           <div className="cart__total">
-            <p className="cart__total-amount">{`$${sum}`}</p>
-            <p className="cart__total-text">{`Total for ${quantity} items`}</p>
+            <p className="cart__total-amount">{`$${amountTotal}`}</p>
+            <p className="cart__total-text">{`Total for ${quantityTotal} items`}</p>
             <div className="cart__line" />
             <button className="cart__button">Checkout</button>
           </div>
@@ -78,4 +71,4 @@ export const CartPage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
