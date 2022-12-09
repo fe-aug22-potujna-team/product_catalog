@@ -13,12 +13,11 @@ export const Footer: React.FC = () => {
           <li className="footer__link-item"><a href="/" className="footer__link">Contacts</a></li>
           <li className="footer__link-item"><a href="/" className="footer__link">rights</a></li>
         </ul>
-        <div className="footer__backtop">
-          <p className="footer__backtop-text">Back to top</p>
-          <a href="/">
-            <img src={back} alt="back top" className="footer__backtop-icon" />
+        <div className='footer__backtop'>
+          <p className='footer__backtop-text'>Back to top</p>
+          <a href='/product_catalog/'>
+            <img src={back} alt='back top' className='footer__backtop-icon'></img>
           </a>
-
         </div>
       </section>
     </div>

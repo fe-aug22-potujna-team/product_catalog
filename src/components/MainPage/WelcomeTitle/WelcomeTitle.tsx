@@ -31,6 +31,7 @@ const SampleNextArrow: React.FC = (props: any) => {
   )
 }
 
+
 const SamplePrevArrow: React.FC = (props: any) => {
   const { onClick } = props
 
@@ -55,24 +56,12 @@ const SamplePrevArrow: React.FC = (props: any) => {
 export const WelcomeTitle: React.FC = () => {
   const settings = {
     dots: true,
-    // dotsClass: "slick-dots",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
-
-    // customPaging: (i: any) => (
-    //     <div className='slick-dots'
-    //       style={{
-    //         width: "20px",
-    //         color: "black",
-    //         border: "3px black solid"
-    //       }}
-    //     >
-    //     </div>
-    //   )
   }
 
   return (
@@ -154,4 +143,4 @@ export const WelcomeTitle: React.FC = () => {
       </div>
     </>
   )
-}
+};

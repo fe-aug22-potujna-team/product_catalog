@@ -1,0 +1,12 @@
+.cardList {
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+
+    &__item {
+        list-style: none;
+    }
+}

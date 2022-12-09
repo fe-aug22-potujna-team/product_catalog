@@ -105,7 +105,6 @@ export const HotPrices: React.FC = () => {
   useEffect(() => {
     void getNewProductsFromServer()
   }, [])
-
   return (
     <>
       <div className="hotPrices">

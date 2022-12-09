@@ -128,7 +128,6 @@ export const BrandNewModels: React.FC = () => {
           </Slider>
         </div>
       )}
-
     </>
   )
 }
