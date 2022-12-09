@@ -1,19 +1,23 @@
-import React from 'react'
-import arrowRightDefault from '../../../images/icons/Slider button - Default (right).png'
-import arrowLeftDefault from '../../../images/icons/Slider button - Default (LEFT).png'
-import arrowRightDisabled from '../../../images/icons/Slider button - Disabled (right).png'
-import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
-import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
-import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
+import React, { useCallback, useEffect, useState } from 'react'
+import Slider from 'react-slick'
+import arrowRightDefault
+  from '../../../images/icons/Slider button - Default (right).png'
+import arrowLeftDefault
+  from '../../../images/icons/Slider button - Default (LEFT).png'
+// import arrowRightDisabled from '../../../images/icons/Slider button - Disabled (right).png'
+// import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
+// import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
+// import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
 import { PhoneCard } from '../../PhoneCard'
 import './HotPrices.scss'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
+import { getBestPrice } from '../../../api/products_api'
+import { Product } from '../../../types/Product'
 
-function SampleNextArrow (props: any) {
-  const { className, style, onClick } = props
+const SampleNextArrow: React.FC = (props: any) => {
+  const { onClick } = props
 
   return (
     // <div
@@ -29,8 +33,8 @@ function SampleNextArrow (props: any) {
   )
 }
 
-function SamplePrevArrow (props: any) {
-  const { className, style, onClick } = props
+const SamplePrevArrow: React.FC = (props: any) => {
+  const { onClick } = props
 
   return (
   // <div
@@ -83,6 +87,24 @@ export const HotPrices: React.FC = () => {
       }
     ]
   }
+  const [bestPricePhone, setBestPricePhones] = useState<Product[]>([])
+  const [isError, setIsError] = useState(false)
+
+  const getNewProductsFromServer = useCallback(
+    async () => {
+      try {
+        const newBestPriceFromServer = await getBestPrice()
+
+        setBestPricePhones(() => [...newBestPriceFromServer])
+      } catch (err) {
+        setIsError(true)
+      }
+    }, []
+  )
+
+  useEffect(() => {
+    void getNewProductsFromServer()
+  }, [])
 
   return (
     <>
@@ -90,34 +112,17 @@ export const HotPrices: React.FC = () => {
         <h2 className="hotPrices__title">Hot prices</h2>
       </div>
 
-      <div className="hotPrices__slider">
-        <Slider {...settings}>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-        </Slider>
-      </div>
+      {(bestPricePhone.length > 0) && (
+        <div className="brandNewModels__slider">
+          <Slider {...settings}>
+            {bestPricePhone.map(phone => (
+              <div key={phone.id}>
+                <PhoneCard phone={phone} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      )}
     </>
   )
 }

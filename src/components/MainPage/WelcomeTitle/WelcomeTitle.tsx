@@ -1,17 +1,17 @@
 import React from 'react'
+import Slider from 'react-slick'
 import './WelcomeTitle.scss'
-import banner from '../../../images/Banner.png'
-import banner189 from '../../../images/Banner189.png'
-import banner320 from '../../../images/Banner320.png'
-import slider_arrow_right from '../../../images/icons/slider_arrow_right.png'
-import slider_arrow_left from '../../../images/icons/slider_arrow_left.png'
-
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
 
-function SampleNextArrow (props: any) {
-  const { className, style, onClick } = props
+const BASE_SERVER_URL = 'https://luminous-cucurucho-0255ea.netlify.app/img/'
+const banner = `${BASE_SERVER_URL}Banner.png`
+const banner189 = `${BASE_SERVER_URL}Banner189.png`
+const banner320 = `${BASE_SERVER_URL}Banner320.png`
+const sliderArrowRight = `${BASE_SERVER_URL}icons/slider_arrow_right.png`
+const sliderArrowLeft = `${BASE_SERVER_URL}icons/slider_arrow_left.png`
+const SampleNextArrow: React.FC = (props: any) => {
+  const { onClick } = props
 
   return (
     // <div
@@ -21,14 +21,18 @@ function SampleNextArrow (props: any) {
     // />
     <div>
       <a href="#home" className="welcomeTitle__arrowRight" onClick={onClick}>
-        <img src={slider_arrow_right} alt="arrow" className="welcomeTitle__arrowRight__img" />
+        <img
+          src={sliderArrowRight}
+          alt="arrow"
+          className="welcomeTitle__arrowRight__img"
+        />
       </a>
     </div>
   )
 }
 
-function SamplePrevArrow (props: any) {
-  const { className, style, onClick } = props
+const SamplePrevArrow: React.FC = (props: any) => {
+  const { onClick } = props
 
   return (
   // <div
@@ -38,7 +42,11 @@ function SamplePrevArrow (props: any) {
   // />
     <div>
       <a href="#home" className="welcomeTitle__arrowLeft" onClick={onClick}>
-        <img src={slider_arrow_left} alt="arrow" className="welcomeTitle__arrowLeft__img" />
+        <img
+          src={sliderArrowLeft}
+          alt="arrow"
+          className="welcomeTitle__arrowLeft__img"
+        />
       </a>
     </div>
   )
@@ -71,13 +79,17 @@ export const WelcomeTitle: React.FC = () => {
     <>
       <div className="welcomeTitle">
         <div>
-          <h2 className="welcomeTitle__title_L">Welcome to Nice Gadgets store!</h2>
+          <h2 className="welcomeTitle__title_L">
+            Welcome to Nice Gadgets store!
+          </h2>
           <h2 className="welcomeTitle__title_M">
             Welcome to Nice
             <br />
             Gadgets store!
           </h2>
-          <h2 className="welcomeTitle__title_S">Welcome to Nice Gadgets store!</h2>
+          <h2 className="welcomeTitle__title_S">
+            Welcome to Nice Gadgets store!
+          </h2>
         </div>
       </div>
 
