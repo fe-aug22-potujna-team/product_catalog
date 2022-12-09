@@ -10,9 +10,9 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
-function SampleNextArrow (props: any) {
-  const { className, style, onClick } = props
-
+function SampleNextArrow(props: any) {
+  // const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     // <div
     //   className={className}
@@ -27,9 +27,9 @@ function SampleNextArrow (props: any) {
   )
 }
 
-function SamplePrevArrow (props: any) {
-  const { className, style, onClick } = props
-
+function SamplePrevArrow(props: any) {
+  // const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
   // <div
   //   className={className}
@@ -47,24 +47,12 @@ function SamplePrevArrow (props: any) {
 export const WelcomeTitle: React.FC = () => {
   const settings = {
     dots: true,
-    // dotsClass: "slick-dots",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
-
-    // customPaging: (i: any) => (
-    //     <div className='slick-dots'
-    //       style={{
-    //         width: "20px",
-    //         color: "black",
-    //         border: "3px black solid"
-    //       }}
-    //     >
-    //     </div>
-    //   )
   }
 
   return (
@@ -142,4 +130,4 @@ export const WelcomeTitle: React.FC = () => {
       </div>
     </>
   )
-}
+};
