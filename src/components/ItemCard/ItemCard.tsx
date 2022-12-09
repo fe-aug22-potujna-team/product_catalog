@@ -419,7 +419,7 @@ export const ItemCard: React.FC = () => {
 
       <div className='itemCard__slider__slider'>
         <Slider {...settings}>
-          <div>
+          {/* <div>
             <PhoneCard />
           </div>
           <div>
@@ -442,7 +442,7 @@ export const ItemCard: React.FC = () => {
           </div>
           <div>
             <PhoneCard />
-          </div>
+          </div> */}
         </Slider>
       </div>
     </>

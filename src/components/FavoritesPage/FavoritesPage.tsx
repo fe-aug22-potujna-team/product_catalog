@@ -19,7 +19,7 @@ export const FavoritesPage: React.FC = () => {
         <p className='favorites__description'>5 items</p>
         <div className='favorites__phones-container'>
           <div className='favorites__phones'>
-            <div className='favorites__card'>
+            {/* <div className='favorites__card'>
               <PhoneCard />
             </div>
             <div className='favorites__card'>
@@ -33,7 +33,7 @@ export const FavoritesPage: React.FC = () => {
             </div>
             <div className='favorites__card'>
               <PhoneCard />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

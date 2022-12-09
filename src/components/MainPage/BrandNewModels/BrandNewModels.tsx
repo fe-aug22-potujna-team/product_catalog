@@ -98,7 +98,7 @@ export const BrandNewModels: React.FC = () => {
       <div className="brandNewModels__slider">
         <Slider {...settings}>
           <div>
-            <PhoneCard />
+            {/* <PhoneCard />
           </div>
           <div>
             <PhoneCard />
@@ -119,7 +119,7 @@ export const BrandNewModels: React.FC = () => {
             <PhoneCard />
           </div>
           <div>
-            <PhoneCard />
+            <PhoneCard /> */}
           </div>
         </Slider>
       </div>
