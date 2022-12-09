@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4757943e-8325-4cd9-b4b7-d69b45d3e841" name="Changes" comment="added eslint config">
-      <change afterPath="$PROJECT_DIR$/src/api/products_api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/Product.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/BrandNewModels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/BrandNewModels/BrandNewModels.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/HotPrices/HotPrices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/HotPrices/HotPrices.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/WelcomeTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/WelcomeTitle/WelcomeTitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhoneCard/PhoneCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhoneCard/PhoneCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-    </list>
+    <list default="true" id="4757943e-8325-4cd9-b4b7-d69b45d3e841" name="Changes" comment="Implemented loading products from server for &quot;hot price&quot; and &quot;brand new&quot; blocks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +59,7 @@
       <workItem from="1670411553235" duration="5134000" />
       <workItem from="1670417080615" duration="2651000" />
       <workItem from="1670448446785" duration="1523000" />
-      <workItem from="1670532067138" duration="15755000" />
+      <workItem from="1670532067138" duration="16050000" />
     </task>
     <task id="LOCAL-00001" summary="Added utils styles grid layout, mixins, variables">
       <created>1669938282327</created>
@@ -105,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670413356204</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented loading products from server for &quot;hot price&quot; and &quot;brand new&quot; blocks">
+      <created>1670593139220</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670593139220</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,18 +124,7 @@
     <MESSAGE value="Added utils styles grid layout, mixins, variables" />
     <MESSAGE value="some changes" />
     <MESSAGE value="added eslint config" />
-    <option name="LAST_COMMIT_MESSAGE" value="added eslint config" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/MainPage/BrandNewModels/BrandNewModels.tsx</url>
-          <line>4</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implemented loading products from server for &quot;hot price&quot; and &quot;brand new&quot; blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented loading products from server for &quot;hot price&quot; and &quot;brand new&quot; blocks" />
   </component>
 </project>
