@@ -14,14 +14,18 @@ interface Props {
   addToFavorites: any
   removeFromSelected: any
   removeFromFavorites: any
-  selected: number[]
-  favorites: number[]
+  selected: number[] | null
+  favorites: number[] | null
 }
 
 export const PhoneCard: React.FC<Props> = ({
   phone,
   addToSelect,
-  addToFavorites, removeFromSelected, removeFromFavorites, selected, favorites
+  addToFavorites,
+  removeFromSelected,
+  removeFromFavorites,
+  selected,
+  favorites
 }) => {
   const {
     name,
@@ -33,8 +37,6 @@ export const PhoneCard: React.FC<Props> = ({
   } = phone
   // const [isSelected, setIsSelected] = useState(false)
   const [isFavorites, setIsFavorites] = useState(false)
-
-  const phoneImage = `https://luminous-cucurucho-0255ea.netlify.app/${phone.image}`;
 
   return (
     <article className='card'>
@@ -71,21 +73,21 @@ export const PhoneCard: React.FC<Props> = ({
 
       <section className='card__add'>
         {
-          !selected.includes(phone.phoneId)
-            ? (<button 
+          !selected?.includes(+phone.phoneId)
+            ? (<button
                 onClick={() => {
                   addToSelect(phone.phoneId)
                 }}
                 className={cn('card__addTo')}
               >
-              Add to cart    
+              Add to cart
             </button>)
-            : (<button 
+            : (<button
                 onClick={() => {
                   removeFromSelected(phone.phoneId)
               }}
-              className={cn('card__addTo', { 
-                  'card__addTo-isActive': selected.includes(phone.phoneId),
+              className={cn('card__addTo', {
+                  'card__addTo-isActive': selected.includes(+phone.phoneId),
               })}
           >
               Added
@@ -95,7 +97,7 @@ export const PhoneCard: React.FC<Props> = ({
     <div className='card__liked'>
         <svg
             onClick={() => {setIsFavorites(!isFavorites)}}
-            className={cn('card__favorites', { 
+            className={cn('card__favorites', {
             'card__favorites-isActive': isFavorites,
         })}
         width="16" height="14"
