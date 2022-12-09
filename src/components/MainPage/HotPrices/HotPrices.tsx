@@ -5,6 +5,8 @@ import arrowRightDisabled from '../../../images/icons/Slider button - Disabled (
 import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
 import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
 import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
+import slider_arrow_right from '../../../images/icons/slider_arrow_right.png'
+import slider_arrow_left from '../../../images/icons/slider_arrow_left.png'
 import { PhoneCard } from '../../PhoneCard'
 import './HotPrices.scss'
 
@@ -12,35 +14,27 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SampleNextArrow (props: any) {
-  const { className, style, onClick } = props
+  const { onClick } = props
 
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "red" }}
-    //   onClick={onClick}
-    // />
     <div>
       <a href="#home" className="hotPrices__arrowRight" onClick={onClick}>
-        <img src={arrowRightDefault} alt="arrow" />
+        <img src={slider_arrow_right} alt="arrow" className="hotPrices__arrowRight__img"/>
       </a>
     </div>
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SamplePrevArrow (props: any) {
-  const { className, style, onClick } = props
+  const { onClick } = props
 
   return (
-  // <div
-  //   className={className}
-  //   style={{ ...style, display: "block", background: "green" }}
-  //   onClick={onClick}
-  // />
     <div>
       <a href="#home" className="hotPrices__arrowLeft" onClick={onClick}>
-        <img src={arrowLeftDefault} alt="arrow" />
+        <img src={slider_arrow_left} alt="arrow" className="hotPrices__arrowLeft__img"/>
       </a>
     </div>
   )
@@ -88,6 +82,9 @@ export const HotPrices: React.FC = () => {
     <>
       <div className="hotPrices">
         <h2 className="hotPrices__title">Hot prices</h2>
+        <div className='hotPrices__arrowCircle'></div>
+        <div></div>
+        <div className='hotPrices__arrowCircle'></div>
       </div>
 
       <div className="hotPrices__slider">

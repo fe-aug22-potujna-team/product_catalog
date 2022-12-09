@@ -104,16 +104,6 @@ button {
       width: 320px;
       height: 320px;
     }
-
-    // @media (max-width: 1199px) {
-    //   width: 593px;
-    //   margin-top: 32px;
-    // }
-  
-    // @media (max-width: 639px) {
-    //   width: 288px;
-    //   margin-top: 24px;
-    // }
   }
 }
 
@@ -125,6 +115,13 @@ button {
   position: absolute;
   top: 0;
   right: -50px;
+  cursor: pointer;
+
+  transition: border 0.5s;
+  
+    &:hover {
+      border: 1px solid #0F0F11;
+    }
 
   @media (max-width: 1199px) {
     height: 189px;
@@ -158,6 +155,13 @@ button {
   position: absolute;
   top: 0;
   left: -50px;
+  cursor: pointer;
+
+  transition: border 0.5s;
+  
+    &:hover {
+      border: 1px solid #0F0F11;
+    }
 
   @media (max-width: 1199px) {
     height: 189px;
