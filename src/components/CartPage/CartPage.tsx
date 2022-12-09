@@ -55,7 +55,7 @@ export const CartPage: React.FC = () => {
       <section className="cart">
         <div className="cart__back">
           <img className="cart__backIcon" src={arrow} alt="back" />
-          <a className="cart__backBtn" href="/">
+          <a className="cart__backBtn" href="/product_catalog/">
             Back
           </a>
         </div>
@@ -77,6 +77,7 @@ export const CartPage: React.FC = () => {
           <div className="cart__total">
             <p className="cart__total-amount">{`$${totalSum}`}</p>
             <p className="cart__total-text">{`Total for ${totalQuantity} items`}</p>
+
             <div className="cart__line" />
             <button className="cart__button">Checkout</button>
           </div>
@@ -84,4 +85,4 @@ export const CartPage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
