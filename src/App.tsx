@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { SelectedPhonePage } from './components/SelectedPhonePage';
 import { CartPage } from './components/CartPage';
 import { FavoritesPage } from './components/FavoritesPage';
+import {ItemCard} from "./components/ItemCard";
 
 const BASE_URL = '/product_catalog'
 
@@ -19,6 +20,7 @@ export const App: React.FC = () => (
     <Routes>
       <Route path={`${BASE_URL}/`} element={<MainPage />}></Route>
       <Route path={`${BASE_URL}/phones`} element={<PhonePage />}></Route>
+      <Route path={`/phones/:phoneId`} element={<ItemCard />}></Route>
       <Route path={`${BASE_URL}/tablets`} element={<TabletPage />}></Route>
       <Route path={`${BASE_URL}/accessories`} element={<AccessoriesPage />}></Route>
       <Route path={`${BASE_URL}/selected`} element={<SelectedPhonePage />}></Route>

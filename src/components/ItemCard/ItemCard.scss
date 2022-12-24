@@ -268,14 +268,23 @@ a {
 
   &__pic {
     &__desktop {
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
       border-radius: 4px;
+      display: block;
+      position: absolute;
       @media (max-width: 1199px) {
         display: none;
       }
     }
 
     &__tablet {
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
       border-radius: 4px;
+      position: absolute;
       @media (min-width: 1200px) {
         display: none;
       }
@@ -306,6 +315,7 @@ a {
       height: 35px;
       align-content: center;
       justify-content: center;
+      position: relative;
 
       &:hover {
         border: 1px solid #0F0F11;
@@ -346,6 +356,16 @@ a {
       align-content: center;
       justify-content: center;
       transition: border 0.3s;
+      position: relative;
+
+      &__img {
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 100%;
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+      }
 
       &:hover {
         border: 1px solid #0F0F11;
@@ -362,8 +382,15 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
+  position: relative;
+
+  @media (max-width: 1199px) {
+    height: 275px;
+  }
 
   &__desktop {
+    position: absolute;
+    height: 100%;
     align-items: center;
     
     @media (max-width: 1199px) {
@@ -372,7 +399,8 @@ a {
   }
 
   &__tablet {
-    height: 288px;
+    position: absolute;
+    max-height: 275px;
     align-items: flex-start;
     
     @media (min-width: 1200px) {
@@ -481,6 +509,7 @@ a {
 
 .itemCard__phone__phone__space__container {
   display: grid;
+  list-style-type: none;
   grid-template-columns: 56px 56px 56px;
   gap: 8px;
   height: 56px;
@@ -494,6 +523,11 @@ a {
   @media (max-width: 640px) {
     width: 288px;
   }
+}
+
+.itemCard__phone__phone__space__container__li {
+  height: 32px;
+  width: 56px;
 }
 
 .itemCard__phone__phone__space__container__item {
@@ -529,7 +563,7 @@ a {
 
 .itemCard__phone__phone__price__container {
   display: grid;
-  grid-template-columns: 72px 8px 52px;
+  grid-template-columns: 72px 25px 72px;
   height: 41px;
 }
 

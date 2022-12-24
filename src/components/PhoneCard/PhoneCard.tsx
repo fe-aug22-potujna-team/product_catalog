@@ -5,6 +5,7 @@ import cn from 'classnames'
 
 
 import { Product } from '../../Product'
+import {Link} from "react-router-dom";
 const BASE_URL = 'https://luminous-cucurucho-0255ea.netlify.app/'
 // const BASE_URL = 'http://localhost:5000/'
 
@@ -28,6 +29,7 @@ export const PhoneCard: React.FC<Props> = ({
   favorites
 }) => {
   const {
+    phoneId,
     name,
     price,
     screen,
@@ -46,9 +48,9 @@ export const PhoneCard: React.FC<Props> = ({
         alt="img"
       />
 
-      <p className="card__title">
+      <Link to={`/phones/${phoneId}`} className="card__title">
         {name}
-      </p>
+      </Link>
 
       <p className="card__price">
         {`$${price}`}
