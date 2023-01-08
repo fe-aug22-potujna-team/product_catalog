@@ -14,8 +14,8 @@ interface Props {
   addToFavorites: any
   removeFromSelected: any
   removeFromFavorites: any
-  selected: number[]
-  favorites: number[]
+  selected: number[] | null
+  favorites: number[] | null
 }
 
 export const PhoneCard: React.FC<Props> = ({
@@ -34,8 +34,6 @@ export const PhoneCard: React.FC<Props> = ({
   // const [isSelected, setIsSelected] = useState(false)
   const [isFavorites, setIsFavorites] = useState(false)
   console.log(selected);
-
-  const phoneImage = `https://luminous-cucurucho-0255ea.netlify.app/${phone.image}`;
 
   return (
     <article className='card'>
@@ -79,9 +77,9 @@ export const PhoneCard: React.FC<Props> = ({
                 }}
                 className={cn('card__addTo')}
               >
-              Add to cart    
+              Add to cart
             </button>)
-            : (<button 
+            : (<button
                 onClick={() => {
                   removeFromSelected(+phone.phoneId)
               }}
@@ -96,7 +94,7 @@ export const PhoneCard: React.FC<Props> = ({
     <div className='card__liked'>
         <svg
             onClick={() => {setIsFavorites(!isFavorites)}}
-            className={cn('card__favorites', { 
+            className={cn('card__favorites', {
             'card__favorites-isActive': isFavorites,
         })}
         width="16" height="14"

@@ -20,26 +20,49 @@ button {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 152px 1fr 64px 64px;
-  align-items: center;
-  margin: auto;
-  height: 64px;
-
   background: #FFFFFF;
   box-shadow: 0px 1px 0px #E2E6E9;
+  height: 64px;
+
+  position:sticky;
+  top: 0;
+
+  z-index: 1;
+
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
 
   @media (max-width: 1199px) {
-    grid-template-columns: 152px 1fr 48px 48px;
     height: 48px;
   }
 
-  @media (max-width: 639px) {
-    grid-template-columns: 1fr 48px;
-    height: 48px;
+  &__container {
+    display: grid;
+    grid-template-columns: 152px 1fr 64px 64px;
+    align-items: center;
+    margin: auto;
+    height: 64px;
+  
+    max-width: 1200px;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px #E2E6E9;
+  
+    @media (max-width: 1199px) {
+      grid-template-columns: 152px 1fr 48px 48px;
+      height: 48px;
+    }
+  
+    @media (max-width: 639px) {
+      grid-template-columns: 1fr 48px;
+      height: 48px;
+    }
   }
 
   &__logo {
+    display: block;
     margin-left: 24px;
 
     @media (max-width: 1199px) {
@@ -58,6 +81,7 @@ button {
   display: grid;
 
   &__heartAndCart {
+    position: relative;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -150,6 +174,7 @@ button {
 }
 
 .img-count {
+  
   width: 14px;
   border-radius: 50%;
   background-color: #476DF4;
@@ -167,11 +192,11 @@ button {
   
   &__heart {
     position: absolute;
-    right: 82px;
+    right: 18px;
     top: 18px;
 
     @media (max-width: 1199px) {
-      right:58px;
+      right:10px;
       top: 10px;
     }
   }

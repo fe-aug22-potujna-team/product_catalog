@@ -8,6 +8,7 @@ import arrowLeftDefault
 // import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
 // import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
 // import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
+
 import { PhoneCard } from '../../PhoneCard'
 import { Product } from '../../../types/Product'
 import './BrandNewModels.scss'
@@ -20,14 +21,9 @@ const SampleNextArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "red" }}
-    //   onClick={onClick}
-    // />
     <div>
       <a href="#home" className="brandNewModels__arrowRight" onClick={onClick}>
-        <img src={arrowRightDefault} alt="arrow" />
+        <img src={slider_arrow_right} alt="arrow" className="brandNewModels__arrowRight__img"/>
       </a>
     </div>
   )
@@ -37,14 +33,9 @@ const SamplePrevArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
-  // <div
-  //   className={className}
-  //   style={{ ...style, display: "block", background: "green" }}
-  //   onClick={onClick}
-  // />
     <div>
       <a href="#home" className="brandNewModels__arrowLeft" onClick={onClick}>
-        <img src={arrowLeftDefault} alt="arrow" />
+        <img src={slider_arrow_left} alt="arrow" className="brandNewModels__arrowLeft__img"/>
       </a>
     </div>
   )
@@ -110,11 +101,10 @@ export const BrandNewModels: React.FC = () => {
     <>
       <div className="brandNewModels">
         <h2 className="brandNewModels__title__M">Brand new models</h2>
-        <h2 className="brandNewModels__title__S">
-          Brand new
-          <br />
-          models
-        </h2>
+        <h2 className="brandNewModels__title__S">Brand new<br />models</h2>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
 
       {(newPhones.length > 0) && (

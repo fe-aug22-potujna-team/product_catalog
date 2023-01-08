@@ -26,8 +26,6 @@ button {
   width: 1136px;
   margin: auto;
 
-  // background: #FAFBFC;
-  
   @media (max-width: 1199px) {
     width: 593px;
   }
@@ -48,7 +46,7 @@ button {
 
   color: #0F0F11;
 
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 
   @media (max-width: 639px) {
     font-size: 22px;
@@ -70,6 +68,12 @@ button {
 
 .imgDesktop {
   border-radius: 8px;
+
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   &__1 {
   padding-left: 49px;
@@ -159,10 +163,6 @@ button {
     display: none;
   }
 }
-
-
-
-
 
 .img {
   border-bottom-right-radius: 8px;

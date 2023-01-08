@@ -20,14 +20,9 @@ const SampleNextArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "red" }}
-    //   onClick={onClick}
-    // />
     <div>
       <a href="#home" className="hotPrices__arrowRight" onClick={onClick}>
-        <img src={arrowRightDefault} alt="arrow" />
+        <img src={slider_arrow_right} alt="arrow" className="hotPrices__arrowRight__img"/>
       </a>
     </div>
   )
@@ -37,14 +32,9 @@ const SamplePrevArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
-  // <div
-  //   className={className}
-  //   style={{ ...style, display: "block", background: "green" }}
-  //   onClick={onClick}
-  // />
     <div>
       <a href="#home" className="hotPrices__arrowLeft" onClick={onClick}>
-        <img src={arrowLeftDefault} alt="arrow" />
+        <img src={slider_arrow_left} alt="arrow" className="hotPrices__arrowLeft__img"/>
       </a>
     </div>
   )
@@ -109,6 +99,9 @@ export const HotPrices: React.FC = () => {
     <>
       <div className="hotPrices">
         <h2 className="hotPrices__title">Hot prices</h2>
+        <div className='hotPrices__arrowCircle'></div>
+        <div></div>
+        <div className='hotPrices__arrowCircle'></div>
       </div>
 
       {(bestPricePhone.length > 0) && (

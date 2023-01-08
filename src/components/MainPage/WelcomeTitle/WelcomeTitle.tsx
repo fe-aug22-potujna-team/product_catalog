@@ -10,35 +10,27 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SampleNextArrow(props: any) {
-  // const { className, style, onClick } = props;
   const { onClick } = props;
+
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "red" }}
-    //   onClick={onClick}
-    // />
     <div>
       <a href="#home" className="welcomeTitle__arrowRight" onClick={onClick}>
-        <img src={slider_arrow_right} alt="arrow" className="welcomeTitle__arrowRight__img" />
+        <img src={slider_arrow_right} alt="arrow" className="welcomeTitle__arrowRight__img"/>
       </a>
     </div>
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function SamplePrevArrow(props: any) {
-  // const { className, style, onClick } = props;
   const { onClick } = props;
+
   return (
-  // <div
-  //   className={className}
-  //   style={{ ...style, display: "block", background: "green" }}
-  //   onClick={onClick}
-  // />
     <div>
       <a href="#home" className="welcomeTitle__arrowLeft" onClick={onClick}>
-        <img src={slider_arrow_left} alt="arrow" className="welcomeTitle__arrowLeft__img" />
+        <img src={slider_arrow_left} alt="arrow" className="welcomeTitle__arrowLeft__img"/>
       </a>
     </div>
   )
