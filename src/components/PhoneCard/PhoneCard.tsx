@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import './PhoneCard.scss';
 import cn from 'classnames'
+
+
+
 import { Product } from '../../Product'
+const BASE_URL = 'https://luminous-cucurucho-0255ea.netlify.app/'
+// const BASE_URL = 'http://localhost:5000/'
 
 interface Props {
   phone: Product
@@ -16,52 +21,61 @@ interface Props {
 export const PhoneCard: React.FC<Props> = ({
   phone,
   addToSelect,
-  addToFavorites, removeFromSelected, removeFromFavorites, selected, favorites
+  addToFavorites, removeFromSelected, removeFromFavorites, selected = [], favorites
 }) => {
+  const {
+    name,
+    price,
+    screen,
+    capacity,
+    ram,
+    image
+  } = phone
   // const [isSelected, setIsSelected] = useState(false)
   const [isFavorites, setIsFavorites] = useState(false)
+  console.log(selected);
 
   const phoneImage = `https://luminous-cucurucho-0255ea.netlify.app/${phone.image}`;
 
   return (
     <article className='card'>
       <img
-        className='card__image'
-        src={phoneImage}
+        className="card__image"
+        src={`${BASE_URL}${image}`}
         alt="img"
       />
 
-      <p className='card__title'>
-        {phone.name}
+      <p className="card__title">
+        {name}
       </p>
 
-      <p className='card__price'>
-        {`$${phone.price}`}
+      <p className="card__price">
+        {`$${price}`}
       </p>
 
-<section className='card__info'>
-    <div className='card__info-item'>
-        <p className='card__info-param'>Screen</p>
-        <p className='card__info-value'>{phone.screen}</p>
-    </div>
+      <section className="card__info">
+        <div className="card__info-item">
+          <p className="card__info-param">Screen</p>
+          <p className="card__info-value">{screen}</p>
+        </div>
 
-    <div className='card__info-item'>
-        <p className='card__info-param'>Capacity</p>
-        <p className='card__info-value'>{phone.capacity}</p>
-    </div>
+        <div className="card__info-item">
+          <p className="card__info-param">Capacity</p>
+          <p className="card__info-value">{capacity}</p>
+        </div>
 
-    <div className='card__info-item'>
-        <p className='card__info-param'>RAM</p>
-        <p className='card__info-value'>{phone.ram}</p>
-    </div>
-</section>
+        <div className="card__info-item">
+          <p className="card__info-param">RAM</p>
+          <p className="card__info-value">{ram}</p>
+        </div>
+      </section>
 
       <section className='card__add'>
         {
-          !selected.includes(phone.phoneId)
+          selected.includes(+phone.phoneId)
             ? (<button 
                 onClick={() => {
-                  addToSelect(phone.phoneId)
+                  addToSelect(+phone.phoneId)
                 }}
                 className={cn('card__addTo')}
               >
@@ -69,10 +83,10 @@ export const PhoneCard: React.FC<Props> = ({
             </button>)
             : (<button 
                 onClick={() => {
-                  removeFromSelected(phone.phoneId)
+                  removeFromSelected(+phone.phoneId)
               }}
               className={cn('card__addTo', { 
-                  'card__addTo-isActive': selected.includes(phone.phoneId),
+                  'card__addTo-isActive': selected.includes(+phone.phoneId),
               })}
           >
               Added
@@ -91,6 +105,7 @@ export const PhoneCard: React.FC<Props> = ({
                 </svg>
             </div>
         </section>
+
     </article>
   );
 };
