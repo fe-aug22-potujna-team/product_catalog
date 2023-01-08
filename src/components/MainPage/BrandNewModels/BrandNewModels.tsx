@@ -1,21 +1,23 @@
-import React from 'react'
-import arrowRightDefault from '../../../images/icons/Slider button - Default (right).png'
-import arrowLeftDefault from '../../../images/icons/Slider button - Default (LEFT).png'
-import arrowRightDisabled from '../../../images/icons/Slider button - Disabled (right).png'
-import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
-import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
-import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
-import slider_arrow_right from '../../../images/icons/slider_arrow_right.png'
-import slider_arrow_left from '../../../images/icons/slider_arrow_left.png'
+import React, { useCallback, useEffect, useState } from 'react'
+import Slider from 'react-slick'
+import arrowRightDefault
+  from '../../../images/icons/Slider button - Default (right).png'
+import arrowLeftDefault
+  from '../../../images/icons/Slider button - Default (LEFT).png'
+// import arrowRightDisabled from '../../../images/icons/Slider button - Disabled (right).png'
+// import arrowLeftDisabled from '../../../images/icons/Slider button - Disabled (LEFT).png'
+// import arrowRightHover from '../../../images/icons/Slider button - Hover (right).png'
+// import arrowLeftHover from '../../../images/icons/Slider button - Hover (LEFT).png'
+
 import { PhoneCard } from '../../PhoneCard'
+import { Product } from '../../../types/Product'
 import './BrandNewModels.scss'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
+import { getBrandNew } from '../../../api/api'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function SampleNextArrow (props: any) {
+const SampleNextArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
@@ -27,8 +29,7 @@ function SampleNextArrow (props: any) {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function SamplePrevArrow (props: any) {
+const SamplePrevArrow: React.FC = (props: any) => {
   const { onClick } = props
 
   return (
@@ -41,6 +42,8 @@ function SamplePrevArrow (props: any) {
 }
 
 export const BrandNewModels: React.FC = () => {
+  const [newPhones, setNewPhones] = useState<Product[]>([])
+  const [isError, setIsError] = useState(false)
   const settings = {
     dots: false,
     infinite: false,
@@ -78,6 +81,22 @@ export const BrandNewModels: React.FC = () => {
     ]
   }
 
+  const getNewProductsFromServer = useCallback(
+    async () => {
+      try {
+        const newProductsFromServer = await getBrandNew()
+
+        setNewPhones(() => [...newProductsFromServer])
+      } catch (err) {
+        setIsError(true)
+      }
+    }, []
+  )
+
+  useEffect(() => {
+    void getNewProductsFromServer()
+  }, [])
+
   return (
     <>
       <div className="brandNewModels">
@@ -88,34 +107,17 @@ export const BrandNewModels: React.FC = () => {
         <div></div>
       </div>
 
-      <div className="brandNewModels__slider">
-        <Slider {...settings}>
-          <div>
-            {/* <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard />
-          </div>
-          <div>
-            <PhoneCard /> */}
-          </div>
-        </Slider>
-      </div>
+      {(newPhones.length > 0) && (
+        <div className="brandNewModels__slider">
+          <Slider {...settings}>
+            {newPhones.map(phone => (
+              <div key={phone.id}>
+                <PhoneCard phone={phone} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      )}
     </>
   )
 }

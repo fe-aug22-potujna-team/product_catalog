@@ -21,11 +21,7 @@ interface Props {
 export const PhoneCard: React.FC<Props> = ({
   phone,
   addToSelect,
-  addToFavorites,
-  removeFromSelected,
-  removeFromFavorites,
-  selected,
-  favorites
+  addToFavorites, removeFromSelected, removeFromFavorites, selected = [], favorites
 }) => {
   const {
     name,
@@ -37,6 +33,7 @@ export const PhoneCard: React.FC<Props> = ({
   } = phone
   // const [isSelected, setIsSelected] = useState(false)
   const [isFavorites, setIsFavorites] = useState(false)
+  console.log(selected);
 
   return (
     <article className='card'>
@@ -73,10 +70,10 @@ export const PhoneCard: React.FC<Props> = ({
 
       <section className='card__add'>
         {
-          !selected?.includes(+phone.phoneId)
-            ? (<button
+          selected.includes(+phone.phoneId)
+            ? (<button 
                 onClick={() => {
-                  addToSelect(phone.phoneId)
+                  addToSelect(+phone.phoneId)
                 }}
                 className={cn('card__addTo')}
               >
@@ -84,9 +81,9 @@ export const PhoneCard: React.FC<Props> = ({
             </button>)
             : (<button
                 onClick={() => {
-                  removeFromSelected(phone.phoneId)
+                  removeFromSelected(+phone.phoneId)
               }}
-              className={cn('card__addTo', {
+              className={cn('card__addTo', { 
                   'card__addTo-isActive': selected.includes(+phone.phoneId),
               })}
           >

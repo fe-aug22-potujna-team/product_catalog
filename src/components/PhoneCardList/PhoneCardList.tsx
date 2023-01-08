@@ -18,9 +18,7 @@ const useLocalStorage = (key: string, initialValue: any): any => {
   //   }
   // })
 
-  const [value, setValue] = useState(
-    JSON.parse(localStorage.getItem(key)) || initialValue
-  )
+  const [value, setValue] = useState(JSON.parse(key ? localStorage.getItem(key) : initialValue))
 
   const save = (x: any): void => {
     setValue((prev: any) => {
